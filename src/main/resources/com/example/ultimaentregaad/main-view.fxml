@@ -24,6 +24,7 @@
     <!-- Botones -->
     <Button text="Agregar" onAction="#agregarPersona" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
     <Button text="Eliminar" onAction="#eliminarPersona" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+    <Button text="Cambiar Configuración" onAction="#abrirVentanaConfig" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
 
     <!-- Tabla -->
     <TableView fx:id="tableView" GridPane.rowIndex="4" GridPane.columnIndex="0" GridPane.columnSpan="2">

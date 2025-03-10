@@ -11,7 +11,7 @@ public class StartApp extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(StartApp.class.getResource("main-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 350, 240);
+        Scene scene = new Scene(fxmlLoader.load(), 350, 500);
         stage.setTitle("Componente AD");
         stage.setScene(scene);
         stage.show();

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.ultimaentregaad.ConfigController">
+    <VBox alignment="CENTER" spacing="10" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="50" AnchorPane.bottomAnchor="50">
+        <!-- Título de la ventana -->
+        <Label text="Propiedades de Conexión" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+
+        <!-- Campos de configuración -->
+        <TextField fx:id="urlField" promptText="Ingrese la URL" prefWidth="300"/>
+        <TextField fx:id="userField" promptText="Ingrese el nombre de usuario" prefWidth="300"/>
+        <PasswordField fx:id="passwordField" promptText="Ingrese la contraseña" prefWidth="300"/>
+
+        <!-- Botones -->
+        <Button text="Guardar Configuración" onAction="#guardarConfiguracion"/>
+        <Button text="Cancelar" onAction="#cancelar"/>
+    </VBox>
+</AnchorPane>

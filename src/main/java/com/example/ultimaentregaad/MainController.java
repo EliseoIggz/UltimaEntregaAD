@@ -2,10 +2,13 @@ package com.example.ultimaentregaad;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -98,6 +101,25 @@ public class MainController {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        }
+    }
+
+    // Método para abrir la ventana de configuración
+    @FXML
+    private void abrirVentanaConfig() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("ConfigWindow.fxml"));
+            Scene scene = new Scene(loader.load());
+            Stage stage = new Stage();
+            stage.setTitle("Configurar Conexión");
+            stage.setScene(scene);
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("No se pudo abrir la ventana de configuración.");
+            alert.showAndWait();
         }
     }
 }
