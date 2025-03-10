@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.ultimaentregaad.MainController"
+          hgap="10" vgap="10">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+
+    <!-- Campos de entrada -->
+    <Label text="Nombre:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+    <TextField fx:id="txtNombre" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+    <Label text="Trabajo:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <TextField fx:id="txtTrabajo" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+    <Label text="Edad:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <TextField fx:id="txtEdad" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+    <!-- Botones -->
+    <Button text="Agregar" onAction="#agregarPersona" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+    <Button text="Eliminar" onAction="#eliminarPersona" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+    <!-- Tabla -->
+    <TableView fx:id="tableView" GridPane.rowIndex="4" GridPane.columnIndex="0" GridPane.columnSpan="2">
+        <columns>
+            <TableColumn fx:id="colNombre" text="Nombre" prefWidth="100"/>
+            <TableColumn fx:id="colTrabajo" text="Trabajo" prefWidth="100"/>
+            <TableColumn fx:id="colEdad" text="Edad" prefWidth="50"/>
+        </columns>
+    </TableView>
+</GridPane>
