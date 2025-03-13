@@ -97,11 +97,10 @@
                 <artifactId>maven-install-plugin</artifactId>
                 <version>3.1.1</version>
             </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>3.1.1</version>
+                <version>3.2.4</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -111,9 +110,12 @@
                         <configuration>
                             <filters>
                                 <filter>
-                                    <!-- Excluir todo excepto DatabaseManager -->
+                                    <!-- Excluir todo menos DatabaseManager -->
+                                    <excludes>
+                                        <exclude>**/*.class</exclude> <!-- Excluye todas las clases -->
+                                    </excludes>
                                     <includes>
-                                        <include>**/DatabaseManager.class</include>
+                                        <include>**/DatabaseManager.class</include> <!-- Incluye solo DatabaseManager -->
                                     </includes>
                                 </filter>
                             </filters>
