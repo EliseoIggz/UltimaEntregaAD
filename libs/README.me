@@ -1,0 +1,34 @@
+#DatabaseManager
+
+## Descripción
+
+Este componente empaquetado en formato .jar facilita la gestión de bases de datos en Java.
+Permite la conexión, ejecución de consultas y manejo de transacciones de manera sencilla y eficiente.
+
+## Instalación
+
+Agregar la dependencia al pom.xml:
+
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>DatabaseManager</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/DatabaseManager.jar</systemPath>
+        </dependency>
+
+Despues recargar Maven en el proyecto
+
+## Uso
+
+Una vez agregado el .jar, puedes importar y usar DatabaseManager en tu código:
+
+        import com.example.ultimaentregaad.DatabaseManager;
+
+        public class TestDB {
+            public static void main(String[] args) {
+                DatabaseManager dbManager = new DatabaseManager();
+                dbManager.connect();
+                System.out.println("Conexión establecida correctamente.");
+            }
+        }
